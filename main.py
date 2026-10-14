@@ -505,7 +505,7 @@ def process_course(chaoxing: Chaoxing, course: dict[str, Any], config: dict):
 
 
 def _dedupe_courses(courses):
-    """同一 (courseId, clazzId) 只保留一条"""
+    """同一 (courseId, clazzId) 只保留一条."""
     course_task = []
     seen_keys = set()
     for course in courses:
@@ -517,7 +517,7 @@ def _dedupe_courses(courses):
 
 
 def _format_course_list(all_course):
-    """生成可读的课程列表, 用于提示或报错"""
+    """生成可读的课程列表, 用于提示或报错."""
     return "\n".join(
         f"  ID: {course['courseId']} 班级ID: {course['clazzId']} 课程名: {course['title']}"
         for course in all_course
